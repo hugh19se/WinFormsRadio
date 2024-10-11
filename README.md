@@ -1,7 +1,7 @@
 # WinFormsRadio
 Basic Radio App Using Windows Forms And [NAudio](https://github.com/naudio/NAudio)
 
-![Application Screenshot](https://raw.githubusercontent.com/hugh19se/WinFormsRadio/refs/heads/development/ReadmeScreenshot.png)
+![Application Screenshot](https://github.com/hugh19se/WinFormsRadio/blob/main/ReadmeScreenshot.png?raw=true)
 
  ## Station Files
 
