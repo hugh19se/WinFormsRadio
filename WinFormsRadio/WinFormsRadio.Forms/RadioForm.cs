@@ -87,8 +87,15 @@ namespace WinFormsRadio.Forms
             string stationURL = playButton.Tag as string;
 
 
-            //logic for playing station needs to go here
-            MessageBox.Show(stationURL);
+        private void VolumeSliderBar_ValueChanged(object sender, EventArgs e)
+        {
+            float currentVolume = VolumeSliderBar.Value;
+            float newVolume = 0f;
+            if (currentVolume != 0)
+            {
+                newVolume = currentVolume / 100;
+            }
+            WaveOutEvent.Volume = newVolume;
         }
     }
 }

@@ -29,20 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RadioForm));
+            VolumeSliderBar = new TrackBar();
+            VolumeLabel = new Label();
+            ((System.ComponentModel.ISupportInitialize)VolumeSliderBar).BeginInit();
             SuspendLayout();
+            // 
+            // VolumeSliderBar
+            // 
+            VolumeSliderBar.Location = new Point(172, 30);
+            VolumeSliderBar.Maximum = 100;
+            VolumeSliderBar.Name = "VolumeSliderBar";
+            VolumeSliderBar.Orientation = Orientation.Vertical;
+            VolumeSliderBar.RightToLeft = RightToLeft.Yes;
+            VolumeSliderBar.RightToLeftLayout = true;
+            VolumeSliderBar.Size = new Size(45, 200);
+            VolumeSliderBar.TabIndex = 0;
+            VolumeSliderBar.ValueChanged += VolumeSliderBar_ValueChanged;
+            // 
+            // VolumeLabel
+            // 
+            VolumeLabel.AutoSize = true;
+            VolumeLabel.Location = new Point(172, 12);
+            VolumeLabel.Name = "VolumeLabel";
+            VolumeLabel.Size = new Size(47, 15);
+            VolumeLabel.TabIndex = 1;
+            VolumeLabel.Text = "Volume";
             // 
             // RadioForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(317, 450);
+            Controls.Add(VolumeLabel);
+            Controls.Add(VolumeSliderBar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "RadioForm";
             Text = "Windows Forms Radio";
             Load += RadioForm_Load;
+            ((System.ComponentModel.ISupportInitialize)VolumeSliderBar).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TrackBar VolumeSliderBar;
+        private Label VolumeLabel;
     }
 }
