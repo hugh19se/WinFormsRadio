@@ -63,7 +63,7 @@ namespace WinFormsRadio.Forms
                     Location = buttonLocation,
                     Tag = thisStation.URL
                 };
-                playButton.Click += new EventHandler(g);
+                playButton.Click += new EventHandler(PlaybackToggle);
                 Controls.Add(playButton);
 
 
@@ -87,7 +87,7 @@ namespace WinFormsRadio.Forms
 
             Height = yCoordinate + 75;
         }
-        public void g(Object sender, EventArgs e)
+        public void PlaybackToggle(Object sender, EventArgs e)
         {
             Button playbackButton = sender as Button;
 
