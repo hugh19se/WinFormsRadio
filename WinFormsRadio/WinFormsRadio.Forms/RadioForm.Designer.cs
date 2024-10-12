@@ -39,6 +39,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "RadioForm";
             Text = "Windows Forms Radio";
+            Load += RadioForm_Load;
             ResumeLayout(false);
         }
 
