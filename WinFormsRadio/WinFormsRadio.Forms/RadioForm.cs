@@ -1,13 +1,17 @@
 using System.Configuration;
 using System.Text.Json;
+using NAudio.Wave;
 
 namespace WinFormsRadio.Forms
 {
     public partial class RadioForm : Form
     {
+        public WaveOutEvent WaveOutEvent;
         public RadioForm()
         {
             InitializeComponent();
+            WaveOutEvent = new WaveOutEvent();
+            WaveOutEvent.Volume = 0.5f;//change to use slider
         }
 
         private void RadioForm_Load(object sender, EventArgs e)
@@ -80,12 +84,35 @@ namespace WinFormsRadio.Forms
                 //increment y coordinate value to avoid controls overlapping
                 yCoordinate += (buttonHeight + itemSpacingFactor);
             }
+
+            Height = yCoordinate + 75;
         }
         public void g(Object sender, EventArgs e)
         {
-            Button playButton = sender as Button;
-            string stationURL = playButton.Tag as string;
+            Button playbackButton = sender as Button;
 
+            if (WaveOutEvent.PlaybackState == PlaybackState.Playing && playbackButton.Text == "Play")
+            {
+                MessageBox.Show("Please Stop Current Stream Before Starting Another", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (playbackButton.Text == "Play")
+            {
+                string stationURL = playbackButton.Tag as string;
+                MediaFoundationReader mediaFoundationReader = new(stationURL);
+                WaveOutEvent.Init(mediaFoundationReader);
+                WaveOutEvent.Play();
+
+                playbackButton.Text = "Stop";
+            }
+            else
+            {
+                WaveOutEvent.Stop();
+
+                playbackButton.Text = "Play";
+            }
+        }
 
         private void VolumeSliderBar_ValueChanged(object sender, EventArgs e)
         {
