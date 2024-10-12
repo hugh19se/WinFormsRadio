@@ -77,7 +77,7 @@ namespace WinFormsRadio.Forms
                     ImageLocation = thisStation.Icon,
                     SizeMode = PictureBoxSizeMode.StretchImage,
                     Size = pictureBoxSize,
-                    Location =  pictureBoxLocation
+                    Location = pictureBoxLocation
                 };
                 Controls.Add(pictureBox);
 
