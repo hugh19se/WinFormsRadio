@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="Stations\BBCRadioOne.station">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Stations\BBCRadioTwo.station">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Stations\TalkSport2.station">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

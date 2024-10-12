@@ -1,0 +1,5 @@
+{
+  "name": "BBC Radio 2",
+  "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVQoMVtHtM6_LZ0P02ovMBd-gjyCikDbJ_Nw&s",
+  "url": "http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio=96000.norewind.m3u8"
+}

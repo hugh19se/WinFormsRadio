@@ -1,0 +1,5 @@
+{
+  "name": "BBC Radio 1",
+  "icon": "https://i1.sndcdn.com/artworks-000120283159-ugwlnq-t500x500.jpg",
+  "url": "http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_one/bbc_radio_one.isml/bbc_radio_one-audio=96000.norewind.m3u8"
+}
