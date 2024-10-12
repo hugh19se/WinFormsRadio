@@ -9,10 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Stations\BBCRadioOne.station">
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Stations\HeartRadioLondon.station">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Stations\BBCRadioTwo.station">
+    <None Update="Stations\RadioXLondon.station">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Stations\SmoothRadio.station">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Stations\TalkSport2.station">
